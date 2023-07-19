@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulir Pendaftaran dan Pembayaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+/* Style untuk warna latar belakang*/
+body { background: linear-gradient(to bottom, #195A9E, #2E969F); margin: 0; height: 100vh; }
+
+    /* Style untuk tombol tab */
+    .tab button {
+      background-color: #00000010;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+      border-radius: 5px;
+}
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Formulir Pendaftaran dan Pembayaran</h2>
+    <form action="data-masuk.php" method="post">
+      <label for="nama">Nama Anda</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="alamat">Alamat</label>
+      <input type="text" id="alamat" name="alamat" required>
+
+      <label for="status">Status</label>
+      <select id="status" name="status" required>
+        <option value="">Pilih status</option>
+        <option value="Mahasiswa">Mahasiswa</option>
+        <option value="Pelajar">Pelajar</option>
+        <option value="Pekerja">Pekerja</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+
+      <input type="submit" value="Daftar dan Bayar">
+    </form>
+  </div>
+</body>
+</html>
