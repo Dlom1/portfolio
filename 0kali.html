@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hitungan Kunjungan</title>
+    <script>
+        function incrementCount() {
+            if (localStorage.getItem('count')) {
+                var count = parseInt(localStorage.getItem('count'));
+                count++;
+                localStorage.setItem('count', count);
+            } else {
+                localStorage.setItem('count', 1);
+            }
+            document.getElementById('count').innerHTML = localStorage.getItem('count');
+        }
+    </script>
+</head>
+<body onload="incrementCount()">
+    <h1>Hitungan Kunjungan</h1>
+    <p>Halaman ini telah dibuka <span id="count">0</span> kali.</p>
+</body>
+</html>
